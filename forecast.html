@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/forecast.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/426bc3398c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <a href="index.html"><img src="/images/logo.png" alt="" class="logo"></a>
+            </div>
+            <div class="navigation__links">
+                <a href="index.html"> My Forecast</a>
+                <a href="index.html">Location's</a>
+            </div>
+        </div>
+        <div class="authorization">
+            <a href="login.html">Log in</a>
+            <a href="registr.html">Join us</a>
+            <div class="dropdown">
+                <a href="#" class="username">Username</a>
+                <div class="dropdown_content">
+                    <a href="">My Account</a>
+                    <a href="">Settings</a>
+                    <a href="" class="logout">Log out</a>
+                </div>
+            </div>
+            <i class="far fa-user"></i>
+        </div>
+    </header>
+    <main>
+        <!-- Slider wrapper is moving -->
+        <!-- <button class="slide_prev"></button> -->
+        <div class="slider">
+            <div class="line">
+                <!-- All slides are static -->
+                <div class="slide">
+                    <div class="overlay">
+                        <h1 id='Moscow'>Moscow</h1>
+                        <p>Temperature: <span id="Moscow_temp"></span>&deg;</p>
+                        <p>Humidity: <span id='Moscow_humidity'></span></p>
+                        <p>Wind Speed: <span id="Moscow_wind"></span></p>
+                        <p>Country: <span id="Moscow_country"></span></p>
+                        <!--<p><span id="Moscow_img"></span></p>-->
+                    </div>
+                    <img src="/images/Moscow.jpg" alt="">
+                    <div>More Information</div>
+                </div>
+                <div class="slide">
+                    <div class="overlay">
+                        <h1 id='Paris'>Paris</h1>
+                        <p>Temperature: <span id="Paris_temp"></span>&deg;</p>
+                        <p>Humidity: <span id='Paris_humidity'></span></p>
+                        <p>Wind Speed: <span id="Paris_wind"></span></p>
+                        <p>Country: <span id="Paris_country"></span></p>
+                        <!--<p><span id="Paris_img"></span></p>-->
+                    </div>
+                    <img src="/images/paris.jpg" alt="">
+                    <div>More Information</div>
+                </div>
+                <div class="slide">
+                    <div class="overlay">
+                        <h1 id="London">London</h1>
+                        <p>Temperature: <span id="London_temp"></span>&deg;</p>
+                        <p>Humidity: <span id='London_humidity'></span></p>
+                        <p>Wind Speed: <span id="London_wind"></span></p>
+                        <p>Country: <span id="London_country"></span></p>
+                        <!--<p><span id="London_img"></span></p>-->
+                    </div>
+                    <img src="/images/London.jpg" alt="">
+                    <div>More Information</div>
+                </div>
+                <div class="slide">
+                    <div class="overlay">
+                        <h1 id="New York">New York</h1>
+                        <!--New York cant be displayed-->
+                        <p>Temperature: <span id="Newark_temp"></span>&deg;</p>
+                        <p>Humidity: <span id='Newark_humidity'></span></p>
+                        <p>Wind Speed: <span id="Newark_wind"></span></p>
+                        <p>Country: <span id="Newark_country"></span></p>
+                        <!--<p><span id="10001_img"></span></p>-->
+                    </div>
+                    <img src="/images/New York.jpg" alt="">
+                    <div>More Information</div>
+                </div>
+                <div class="slide">
+                    <div class="overlay">
+                        <h1 id="Beijing">Beijing</h1>
+                        <p>Temperature: <span id="Beijing_temp"></span>&deg;</p>
+                        <p>Humidity: <span id='Beijing_humidity'></span></p>
+                        <p>Wind Speed: <span id="Beijing_wind"></span></p>
+                        <p>Country: <span id="Beijing_country"></span></p>
+                        <!--<p><span id="Beijing_img"></span></p>-->
+                    </div>
+                    <img src="/images/Beijing.jpg" alt="" class="city_picture">
+                    <div>More Information</div>
+                </div>
+            </div>
+        </div>
+        <!-- <button class="slide_next"></button> -->
+    </main>
+    <section class="search">
+        <h1>Select city to add in your forecast</h1>
+        <input type="text" class="search_input" placeholder="Search.." title="Type in a category">
+
+        <div class="location__menu">
+            <a class="city">Moscow</a>
+            <a class="city">London</a>
+            <a class="city">Beijing</a>
+            <a class="city">New York</a>
+            <a class="city">Nur-Sultan</a>
+            <a class="city">Helsinki</a>
+            <a class="city">Rome</a>
+            <a class="city">Paris</a>
+            <a class="city">Kiev</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <!-- Subscription Links -->
+        <div class="footer__info">
+            <h1>Subscription</h1>
+            <ul>
+                <li><a href="">How to start</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Subcribe for free</a></li>
+                <li><a href="">FAQ</a></li>
+            </ul>
+        </div>
+        <!-- Terms & Conditions Links -->
+        <div class="footer__info">
+            <h1>Terms & Conditions</h1>
+            <ul>
+                <li><a href="#">Terms and conditions of sale</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Website terms and conditions</a></li>
+            </ul>
+        </div>
+        <!-- About Info -->
+        <div class="about">
+            <h1>About us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nobis! Vel maxime doloremque ipsum, tempore
+                laudantium ad debitis minima earum.</p>
+        </div>
+    </footer>
+    <script src="/forecast.js"></script>
+    <script src="/auth.js"></script>
+</body>
+
+</html>

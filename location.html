@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/location.css">
+    <script src="https://kit.fontawesome.com/426bc3398c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <img src="/images/logo.png" alt="" class="logo" href="index.html">
+            </div>
+            <div class="navigation__links">
+                <a href="index.html"> My Forecast</a>
+                <a href="index.html">Location's</a>
+            </div>
+        </div>
+        <div class="authorization">
+            <a href="login.html">Log in</a>
+            <a href="registr.html">Join us</a>
+            <i class="far fa-user"></i>
+        </div>
+    </header>
+    <!-- Main -->
+    <main>
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+
+        <div class="location__menu">
+            <a href="#">Moscow</a>
+            <a href="#">London</a>
+            <a href="#">Beijing</a>
+            <a href="#">New York</a>
+            <a href="#">Nur-Sultan</a>
+            <a href="#">Helsinki</a>
+            <a href="#">Rome</a>
+            <a href="#">Paris</a>
+            <a href="#">Kiev</a>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- Subscription Links -->
+        <div class="footer__info">
+            <h1>Subscription</h1>
+            <ul>
+                <li><a href="">How to start</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Subcribe for free</a></li>
+                <li><a href="">FAQ</a></li>
+            </ul>
+        </div>
+        <!-- Terms & Conditions Links -->
+        <div class="footer__info">
+            <h1>Terms & Conditions</h1>
+            <ul>
+                <li><a href="#">Terms and conditions of sale</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Website terms and conditions</a></li>
+            </ul>
+        </div>
+        <!-- About Info -->
+        <div class="about">
+            <h1>About us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nobis! Vel maxime doloremque ipsum, tempore
+                laudantium ad debitis minima earum.</p>
+        </div>
+    </footer>
+    <script src="/forecast.js"></script>
+    <script src="/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: rgb(107, 107, 107);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+//Header
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: #000;
+
+
+    //Contain's 2 links:Forecast & Location's
+    .menu {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    //Logo styles
+    .logo {
+        width: 70pt;
+        height: 30pt;
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+
+    img {
+        align-content: center;
+    }
+
+    //Added link to img
+    img:hover {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        margin-right: 5px;
+        padding: 5px;
+
+    }
+
+    //Link hover effects
+    a:hover {
+        transition-duration: .15s;
+        color: rgb(220, 118, 84);
+        border-bottom: rgb(220, 118, 84) solid 1px;
+    }
+
+    .authorization {
+        margin-right: 10px;
+
+        i {
+            color: white;
+        }
+    }
+
+    .fa-user::before {
+        color: white;
+        font-size: 20px;
+    }
+
+    .fa-user:hover {
+        color: rgb(220, 118, 84);
+    }
+}
+
+//Main
+main {
+
+    input,
+    ul {
+        display: block;
+        width: 15%;
+        margin: 0 auto;
+
+        li {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+}
+
+//Footer
+footer {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    line-height: 25px;
+
+    //Phone screens
+    @media only screen and (max-width:768px) {
+        flex-direction: column;
+    }
+
+    .footer__info,
+    .about {
+        margin: 10px;
+        width: 20%;
+
+        h1,
+        p,
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        //footer links hover
+        a:hover {
+            transition-duration: .15s;
+            color: rgb(220, 118, 84);
+            border-bottom: rgb(220, 118, 84) solid 1px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+}

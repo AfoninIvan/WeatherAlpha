@@ -1,0 +1,210 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: rgb(107, 107, 107);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+//Header
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: #000;
+
+
+    //Contain's 2 links:Forecast & Location's
+    .menu {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        height: 100%;
+    }
+
+    //Logo styles
+    .logo {
+        width: 70pt;
+        height: 30pt;
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+
+    img {
+        align-content: center;
+    }
+
+    //Added link to img
+    img:hover {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+
+    }
+
+    //Link hover effects
+    a:hover {
+        transition-duration: .15s;
+        color: rgb(220, 118, 84);
+        border-bottom: rgb(220, 118, 84) solid 1px;
+    }
+
+    .authorization {
+        margin-right: 10px;
+        display: flex;
+        min-width: 160px;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+
+        i {
+            color: white;
+
+        }
+
+        .fa-user::before {
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            // margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .fa-user:hover::before {
+            color: rgb(220, 118, 84);
+        }
+    }
+
+}
+
+//Main
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    video {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video__text {
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: auto;
+        position: absolute;
+        text-align: center;
+        line-height: 35px;
+        top: 50%;
+        left: 50%;
+        background-color: black;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+
+        input {
+            width: 50%;
+            padding: 5px;
+            margin-top: 5%;
+            outline: none;
+            color: black;
+
+            &:focus {
+                transition: .4s;
+                border-radius: 3px;
+                background: rgb(220, 118, 84);
+                border: none;
+                border-bottom: solid white 2px;
+            }
+        }
+
+        button {
+            width: 30%;
+            font-size: 18px;
+            padding: 5px;
+            margin-top: 5%;
+            border-radius: 3px;
+            background: rgb(220, 118, 84);
+            border: none;
+            cursor: pointer;
+            outline: none;
+
+            &:active {
+                background: white;
+            }
+        }
+
+        span {
+            cursor: pointer;
+            border-bottom: 2px solid;
+        }
+
+        h1,
+        p {
+            padding: 10px;
+            color: white;
+        }
+
+        h1 {
+            font: 600;
+            font-size: 36px;
+        }
+
+        p {
+            font: 600;
+            font-size: 24px;
+        }
+
+    }
+
+    .errors {
+        color: white;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+}
+
+//Footer
+footer {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    line-height: 25px;
+
+    @media only screen and (max-width:768px) {
+        flex-direction: column;
+    }
+
+    .footer__info,
+    .about {
+        margin: 10px;
+        width: 20%;
+
+        h1,
+        p,
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            transition-duration: .15s;
+            color: rgb(220, 118, 84);
+            border-bottom: rgb(220, 118, 84) solid 1px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+}
