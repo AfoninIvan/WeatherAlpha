@@ -1,8 +1,70 @@
 body {
   width: 100%;
   height: 100%;
+  position: relative;
   background: #6b6b6b;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
+.mobile__header {
+  display: none; }
+  @media screen and (max-width: 870px) {
+    .mobile__header {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 45px;
+      z-index: 999999;
+      overflow: hidden;
+      transition: .5s;
+      transition-property: all;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+      background-color: #000; }
+      .mobile__header .mobile__menu {
+        display: flex;
+        min-width: 42px;
+        justify-content: space-between;
+        margin-top: 4px;
+        margin-bottom: 4px; }
+      .mobile__header .mobile__submenu {
+        display: flex;
+        flex-direction: column;
+        text-align: right; }
+      .mobile__header .logo {
+        width: 70pt; }
+      .mobile__header a {
+        text-decoration: none;
+        color: white;
+        padding: 15px; }
+      .mobile__header a:hover {
+        transition-duration: .15s;
+        color: #dc7654;
+        border-bottom: #dc7654 solid 1px; }
+      .mobile__header .mobile__burger__container {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 20px; }
+        .mobile__header .mobile__burger__container .bar1,
+        .mobile__header .mobile__burger__container .bar2,
+        .mobile__header .mobile__burger__container .bar3 {
+          width: 25px;
+          height: 2px;
+          background-color: #dc7654;
+          margin: 6px 0;
+          -webkit-transition: .4s;
+          -o-transition: .4s;
+          transition: .4s; }
+      .mobile__header .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+        -ms-transform: rotate(-45deg) translate(-6px, 5px);
+        transform: rotate(-45deg) translate(-6px, 5px); }
+      .mobile__header .change .bar2 {
+        opacity: 0; }
+      .mobile__header .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-6px, -5px);
+        -ms-transform: rotate(45deg) translate(-6px, -5px);
+        transform: rotate(45deg) translate(-6px, -5px); } }
 
 header {
   display: flex;
@@ -11,11 +73,18 @@ header {
   width: 100%;
   height: 60px;
   background: #000; }
+  @media screen and (max-width: 870px) {
+    header {
+      display: none; } }
   header .menu {
     display: flex;
     align-items: center;
     margin-left: 10px;
     height: 100%; }
+    @media screen and (max-width: 870px) {
+      header .menu {
+        flex-direction: column;
+        height: 100px; } }
   header .logo {
     width: 70pt;
     height: 30pt;
@@ -40,6 +109,10 @@ header {
     justify-content: flex-end;
     align-items: center;
     height: 100%; }
+    @media screen and (max-width: 870px) {
+      header .authorization {
+        flex-direction: column;
+        height: 100px; } }
     header .authorization i {
       color: white; }
     header .authorization .fa-user::before {
@@ -55,8 +128,11 @@ main {
   width: 100%;
   height: 100%;
   position: relative; }
+  @media screen and (max-width: 590px) {
+    main {
+      height: auto; } }
   main video {
-    display: block;
+    display: flex;
     width: 100%;
     height: 100%; }
   main .video__text {
@@ -72,6 +148,9 @@ main {
     background-color: black;
     transform: translate(-50%, -50%);
     border-radius: 5px; }
+    @media screen and (max-width: 270px) {
+      main .video__text {
+        width: 100%; } }
     main .video__text input {
       width: 50%;
       padding: 5px;
@@ -84,6 +163,11 @@ main {
         background: #dc7654;
         border: none;
         border-bottom: solid white 2px; }
+      @media screen and (max-width: 600px) {
+        main .video__text input {
+          width: 100%;
+          padding: 0;
+          margin: 0; } }
     main .video__text button {
       width: 30%;
       font-size: 18px;
@@ -96,6 +180,11 @@ main {
       outline: none; }
       main .video__text button:active {
         background: white; }
+      @media screen and (max-width: 600px) {
+        main .video__text button {
+          padding: 0;
+          font-size: 10px;
+          width: 100%; } }
     main .video__text span {
       cursor: pointer;
       border-bottom: 2px solid; }
@@ -106,13 +195,34 @@ main {
     main .video__text h1 {
       font: 600;
       font-size: 36px; }
+      @media screen and (max-width: 578px) {
+        main .video__text h1 {
+          font-size: 18px;
+          line-height: 2px; } }
+      @media screen and (max-width: 390px) {
+        main .video__text h1 {
+          font-size: 14px;
+          line-height: 1px;
+          padding: 4px; } }
     main .video__text p {
       font: 600;
       font-size: 24px; }
+      @media screen and (max-width: 578px) {
+        main .video__text p {
+          font-size: 14px;
+          line-height: 2; } }
+      @media screen and (max-width: 390px) {
+        main .video__text p {
+          font-size: 8px;
+          padding: 2px; } }
   main .errors {
     color: white;
     font-size: 1.5em;
     margin-bottom: 10px; }
+    @media screen and (max-width: 390px) {
+      main .errors p {
+        font-size: 8px;
+        padding: 2px; } }
 
 footer {
   display: flex;
@@ -129,6 +239,10 @@ footer {
   footer .about {
     margin: 10px;
     width: 20%; }
+    @media screen and (max-width: 390px) {
+      footer .footer__info,
+      footer .about {
+        width: 100%; } }
     footer .footer__info h1,
     footer .footer__info p,
     footer .footer__info a,
@@ -137,6 +251,23 @@ footer {
     footer .about a {
       text-decoration: none;
       color: white; }
+      @media screen and (max-width: 578px) {
+        footer .footer__info h1,
+        footer .footer__info p,
+        footer .footer__info a,
+        footer .about h1,
+        footer .about p,
+        footer .about a {
+          font-size: 14px;
+          line-height: 2; } }
+      @media screen and (max-width: 390px) {
+        footer .footer__info h1,
+        footer .footer__info p,
+        footer .footer__info a,
+        footer .about h1,
+        footer .about p,
+        footer .about a {
+          font-size: 8px; } }
     footer .footer__info a:hover,
     footer .about a:hover {
       transition-duration: .15s;
@@ -145,3 +276,7 @@ footer {
     footer .footer__info h1,
     footer .about h1 {
       font-size: 24px; }
+      @media screen and (max-width: 390px) {
+        footer .footer__info h1,
+        footer .about h1 {
+          font-size: 10px; } }

@@ -1,11 +1,27 @@
 //Header dropdown events
+
 document.querySelector('.username').onclick = () => {
     document.querySelector('.dropdown_content').style.display = "flex";
 }
 document.querySelector('.dropdown_content').onmouseleave = () => {
     document.querySelector('.dropdown_content').style.display = "none";
 }
+
+//Burger menu activation
+
+document.querySelector('.mobile__burger__container').onclick = () => {
+    const burger = document.querySelector('.mobile__burger__container')
+    const mobileHeader = document.querySelector('.mobile__header');
+    burger.classList.toggle('change')
+    if (burger.classList.contains('change') == false) {
+        mobileHeader.style.height = "42px";
+    } else {
+        mobileHeader.style.height = "auto";
+    }
+}
+
 //Header authentication
+
 function lastUser() {
     const authElem = document.querySelectorAll('.authorization a')
     const lastUser = localStorage.key(0);
@@ -22,6 +38,7 @@ function lastUser() {
 lastUser()
 
 //Log out
+
 document.querySelector('.logout').onclick = (event) => {
     event.preventDefault();
     const authElem = document.querySelectorAll('.authorization a');
@@ -32,6 +49,7 @@ document.querySelector('.logout').onclick = (event) => {
 
 }
 //Getting forecast data using API OpenWeatherMap
+
 function getWeather(city) {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=55155e7e68ef63a6d364bdc4296ab4c6`).then(function (resp) {
             return resp.json()
@@ -40,7 +58,6 @@ function getWeather(city) {
             document.querySelector(`#${city}_humidity`).textContent = data.main.humidity + '%';
             document.querySelector(`#${city}_wind`).textContent = data.wind.speed + " m/s";
             document.querySelector(`#${city}_country`).textContent = data.sys.country;
-            // document.querySelector(`#${city}_img`).innerHTML = `<img src="http://openweathermap.org/img/wn/${data}@2x.png" style='width:100px'>`;
         })
         .catch(function () {
 
@@ -77,6 +94,7 @@ document.querySelector('.search_input').onkeyup = () => {
 //Using by user to add city in personal forecast
 function addCity() {
     //Declaring variables
+
     // this = city name that user selected in search
     let cityName = this.textContent
     let newSlide = document.createElement('div');
@@ -89,12 +107,15 @@ function addCity() {
     <p>Country: <span id="${cityName}_country"></span></p>
     </div>
     <img src="/images/${cityName}.jpg" alt="" class="city_picture">
-    <div>More Information</div>`
+    `
+
     //Getting info about user and parse it
-    let currentUser = JSON.parse(localStorage.getItem(localStorage.key(0)))
+    // let currentUser = JSON.parse(localStorage.getItem(localStorage.key(0)))
+
     //Send info to localStorage
-    currentUser.cityList += cityName;
-    JSON.stringify(currentUser)
+    // currentUser.set("cityList", `${cityName}`)
+    // JSON.stringify(currentUser)
+
     //Sending new slide to the end of slider
     document.querySelector('.line').append(newSlide);
     getWeather(`${cityName}`);
@@ -102,12 +123,16 @@ function addCity() {
 }
 
 //Setting onclick event at all of slides
+
 for (let i = 0; i < document.querySelectorAll('.city').length; i++) {
     document.querySelectorAll('.city')[i].onclick = addCity;
 }
+
 //Slider Function
+
 function slider() {
     //Slider Variables
+
     const line = document.querySelector('.line');
     let slides = document.querySelectorAll('.slide');
     let sliderWidth = document.querySelector('.slider').offsetWidth;
@@ -116,13 +141,17 @@ function slider() {
     let offset = 0
     let step = 0;
     let remain = 0;
+
     //Working with slider
+
     for (let i = 0; i < slides.length; i++) {
         widthArray.push(slides[i].offsetWidth)
         lineWidth += slides[i].offsetWidth;
     }
     line.style.width = lineWidth + 'px'
+
     //Setting onclick events on slides
+
     for (let i = 0; i < slides.length; i++) {
         slides[i].onclick = () => {
             remain = lineWidth - sliderWidth - (offset + widthArray[step])
@@ -136,6 +165,7 @@ function slider() {
 
             }
             //Reseting variables because of the end of slider
+
             if (step + 1 == slides.length) {
                 step = 0;
                 offset = 0

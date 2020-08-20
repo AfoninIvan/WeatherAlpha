@@ -58,10 +58,22 @@
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.2);
 
+    @media only screen and (max-width:768px) {
+        font-size: 18px;
+        line-height: 30px;
+        top: 10%;
+    }
+
     h1,
     p {
         margin-left: 5px;
         color: white;
+
+        @media only screen and (max-width:300px) {
+            font-size: 14px;
+            line-height: 15px;
+            top: 10%;
+        }
     }
 
     img {
@@ -83,6 +95,10 @@
     background: black;
 
     h1 {
+        @media only screen and (max-width:768px) {
+            font-size: 18px;
+        }
+
         color: white;
         text-align: center;
         font-size: 48px;
@@ -92,6 +108,10 @@
 
 .search_input {
     text-transform: capitalize;
+
+    @media only screen and (max-width:500px) {
+        width: 100%;
+    }
 }
 
 //Footer styles
@@ -114,6 +134,10 @@
     border-radius: 3px;
     margin-bottom: 2px;
     background-color: rgb(59, 59, 59);
+
+    @media only screen and (max-width:500px) {
+        width: 100%;
+    }
 }
 
 .location__menu a:hover {

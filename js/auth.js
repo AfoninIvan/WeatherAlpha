@@ -1,7 +1,20 @@
+"use strict"
+//Burger menu activation
+
+document.querySelector('.mobile__burger__container').onclick = () => {
+    const burger = document.querySelector('.mobile__burger__container')
+    const mobileHeader = document.querySelector('.mobile__header');
+    burger.classList.toggle('change')
+    if (burger.classList.contains('change') == false) {
+        mobileHeader.style.height = "42px";
+    } else {
+        mobileHeader.style.height = "auto";
+    }
+}
 document.querySelector('.login__button').onclick = (event) => {
 
     event.preventDefault()
-
+    let out = ''
     const loginValue = document.querySelector('.login').value;
     const passwordValue = document.querySelector('.login__password').value;
     let currentUser = JSON.parse(localStorage.getItem(loginValue))

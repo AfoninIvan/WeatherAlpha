@@ -41,10 +41,21 @@
   border: 2px solid black;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 768px) {
+    .overlay {
+      font-size: 18px;
+      line-height: 30px;
+      top: 10%; } }
   .overlay h1,
   .overlay p {
     margin-left: 5px;
     color: white; }
+    @media only screen and (max-width: 300px) {
+      .overlay h1,
+      .overlay p {
+        font-size: 14px;
+        line-height: 15px;
+        top: 10%; } }
   .overlay img {
     width: 100px; }
 
@@ -63,9 +74,15 @@
     text-align: center;
     font-size: 48px;
     padding: 10px; }
+    @media only screen and (max-width: 768px) {
+      .search h1 {
+        font-size: 18px; } }
 
 .search_input {
   text-transform: capitalize; }
+  @media only screen and (max-width: 500px) {
+    .search_input {
+      width: 100%; } }
 
 .location__menu {
   padding: 0;
@@ -82,6 +99,9 @@
   border-radius: 3px;
   margin-bottom: 2px;
   background-color: #3b3b3b; }
+  @media only screen and (max-width: 500px) {
+    .location__menu a {
+      width: 100%; } }
 
 .location__menu a:hover {
   background-color: black; }

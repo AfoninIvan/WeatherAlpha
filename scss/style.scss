@@ -1,8 +1,102 @@
 body {
     width: 100%;
     height: 100%;
+    position: relative;
     background: rgb(107, 107, 107);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+//Mobile header
+.mobile__header {
+    display: none;
+
+    @media screen and (max-width: 870px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 45px;
+        z-index: 999999;
+        overflow: hidden;
+        transition: .5s;
+        transition-property: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+        background-color: #000;
+
+        .mobile__menu {
+            display: flex;
+            min-width: 42px;
+            justify-content: space-between;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        .mobile__submenu {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+        }
+
+        .logo {
+            width: 70pt;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+
+        }
+
+        //Link hover effects
+        a:hover {
+            transition-duration: .15s;
+            color: rgb(220, 118, 84);
+            border-bottom: rgb(220, 118, 84) solid 1px;
+        }
+
+        .mobile__burger__container {
+            display: inline-block;
+            cursor: pointer;
+            margin-right: 20px;
+
+            .bar1,
+            .bar2,
+            .bar3 {
+                width: 25px;
+                height: 2px;
+                background-color: rgb(220, 118, 84);
+                margin: 6px 0;
+                -webkit-transition: .4s;
+                -o-transition: .4s;
+                transition: .4s;
+            }
+
+        }
+
+        .change {
+
+            .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-6px, 5px);
+                -ms-transform: rotate(-45deg) translate(-6px, 5px);
+                transform: rotate(-45deg) translate(-6px, 5px);
+            }
+
+            .bar2 {
+                opacity: 0;
+            }
+
+            .bar3 {
+                -webkit-transform: rotate(45deg) translate(-6px, -5px);
+                -ms-transform: rotate(45deg) translate(-6px, -5px);
+                transform: rotate(45deg) translate(-6px, -5px);
+
+            }
+        }
+    }
+
 }
 
 //Header
@@ -14,6 +108,9 @@ header {
     height: 60px;
     background: #000;
 
+    @media screen and (max-width: 870px) {
+        display: none;
+    }
 
     //Contain's 2 links:Forecast & Location's
     .menu {
@@ -21,6 +118,11 @@ header {
         align-items: center;
         margin-left: 10px;
         height: 100%;
+
+        @media screen and (max-width: 870px) {
+            flex-direction: column;
+            height: 100px;
+        }
     }
 
     //Logo styles
@@ -29,6 +131,8 @@ header {
         height: 30pt;
         margin-left: 5px;
         margin-right: 20px;
+
+
     }
 
     img {
@@ -62,6 +166,11 @@ header {
         align-items: center;
         height: 100%;
 
+        @media screen and (max-width: 870px) {
+            flex-direction: column;
+            height: 100px;
+        }
+
         i {
             color: white;
 
@@ -80,6 +189,7 @@ header {
         }
     }
 
+
 }
 
 //Main
@@ -89,13 +199,19 @@ main {
     height: 100%;
     position: relative;
 
+    @media screen and (max-width: 590px) {
+        height: auto;
+    }
+
+
     video {
-        display: block;
+        display: flex;
         width: 100%;
         height: 100%;
     }
 
     .video__text {
+
         align-items: center;
         justify-content: center;
         width: 30%;
@@ -108,6 +224,10 @@ main {
         background-color: black;
         transform: translate(-50%, -50%);
         border-radius: 5px;
+
+        @media screen and (max-width: 270px) {
+            width: 100%;
+        }
 
         input {
             width: 50%;
@@ -122,6 +242,12 @@ main {
                 background: rgb(220, 118, 84);
                 border: none;
                 border-bottom: solid white 2px;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                padding: 0;
+                margin: 0;
             }
         }
 
@@ -139,6 +265,12 @@ main {
             &:active {
                 background: white;
             }
+
+            @media screen and (max-width: 600px) {
+                padding: 0;
+                font-size: 10px;
+                width: 100%;
+            }
         }
 
         span {
@@ -155,11 +287,34 @@ main {
         h1 {
             font: 600;
             font-size: 36px;
+
+            @media screen and (max-width: 578px) {
+                font-size: 18px;
+                line-height: 2px;
+            }
+
+            @media screen and (max-width: 390px) {
+                font-size: 14px;
+                line-height: 1px;
+                padding: 4px;
+            }
+
         }
 
         p {
             font: 600;
             font-size: 24px;
+
+            @media screen and (max-width: 578px) {
+                font-size: 14px;
+                line-height: 2;
+            }
+
+            @media screen and (max-width: 390px) {
+                font-size: 8px;
+                padding: 2px;
+
+            }
         }
 
     }
@@ -168,6 +323,14 @@ main {
         color: white;
         font-size: 1.5em;
         margin-bottom: 10px;
+
+        @media screen and (max-width: 390px) {
+            p {
+                font-size: 8px;
+                padding: 2px;
+            }
+
+        }
     }
 }
 
@@ -190,9 +353,22 @@ footer {
         margin: 10px;
         width: 20%;
 
+        @media screen and (max-width: 390px) {
+            width: 100%;
+        }
+
         h1,
         p,
         a {
+            @media screen and (max-width: 578px) {
+                font-size: 14px;
+                line-height: 2;
+            }
+
+            @media screen and (max-width: 390px) {
+                font-size: 8px;
+            }
+
             text-decoration: none;
             color: white;
         }
@@ -205,6 +381,10 @@ footer {
 
         h1 {
             font-size: 24px;
+
+            @media screen and (max-width: 390px) {
+                font-size: 10px;
+            }
         }
     }
 }

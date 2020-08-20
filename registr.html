@@ -11,27 +11,54 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <div class="menu">
             <div class="logo">
                 <a href="index.html"><img src="/images/logo.png" alt="" class="logo"></a>
             </div>
+            <!-- Navigation links -->
             <div class="navigation__links">
                 <a href="index.html"> My Forecast</a>
                 <a href="index.html">Location's</a>
             </div>
         </div>
+        <!-- Authorization links -->
         <div class="authorization">
             <a href="login.html">Log in</a>
             <a href="registr.html">Join us</a>
         </div>
     </header>
+    <!-- Mobile header -->
+    <div class="mobile__header">
+        <!-- Mobile menu container -->
+        <div class="mobile__menu">
+            <div class="logo">
+                <a href="index.html"><img src="/images/logo.png" alt="" class="logo"></a>
+            </div>
+            <!-- Burger menu -->
+            <div class="mobile__burger__container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+        <!-- Submenu with all header link -->
+        <div class="mobile__submenu">
+            <a href="index.html"> My Forecast</a>
+            <a href="index.html">Location's</a>
+            <a href="login.html">Log in</a>
+            <a href="registr.html">Join us</a>
+        </div>
+    </div>
+    <!-- Main -->
     <main>
         <video playsinline autoplay muted loop>
             <source src="/images/videoplayback.mp4">
         </video>
         <div class="video__text">
             <h1>Join us!</h1>
+            <!-- Registration Form -->
             <form action="" method="get" class="registr__form">
                 <input type="email" class="registr__email" placeholder="Email" required><br>
                 <input type="text" class="registr__login" placeholder="Login" required>
@@ -42,7 +69,9 @@
         </div>
 
     </main>
+    <!-- Footer -->
     <footer>
+        <!-- Subscription -->
         <div class="footer__info">
             <h1>Subscription</h1>
             <ul>
@@ -52,6 +81,7 @@
                 <li><a href="">FAQ</a></li>
             </ul>
         </div>
+        <!-- Terms & Conditions -->
         <div class="footer__info">
             <h1>Terms & Conditions</h1>
             <ul>
@@ -60,13 +90,15 @@
                 <li><a href="#">Website terms and conditions</a></li>
             </ul>
         </div>
+        <!-- About -->
         <div class="about">
             <h1>About us</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, nobis! Vel maxime doloremque ipsum, tempore
                 laudantium ad debitis minima earum.</p>
         </div>
     </footer>
-    <script src="/script.js"></script>
+    <!-- Script link -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
