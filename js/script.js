@@ -11,20 +11,13 @@ document.querySelector('.mobile__burger__container').onclick = () => {
         mobileHeader.style.height = "auto";
     }
 }
-//Header dropdown events
-
-document.querySelector('.username').onclick = () => {
-    document.querySelector('.dropdown_content').style.display = "flex";
-}
-document.querySelector('.dropdown_content').onmouseleave = () => {
-    document.querySelector('.dropdown_content').style.display = "none";
-}
 //Setting log in form
 
 document.querySelector('.registr__button').onclick = (event) => {
 
     // Need to not reboot the page
     event.preventDefault();
+    console.log(true)
 
     //Getting all input values and setting email symbols to lower case
     const emailValue = document.querySelector('.registr__email').value.toLowerCase();
@@ -49,7 +42,7 @@ document.querySelector('.registr__button').onclick = (event) => {
 
     } else {
         for (let key in localStorage) {
-            if (localStorage.key(key).includes(loginValue) == true) {
+            if (localStorage.key(key) == loginValue) {
 
                 //Works until index become 1
                 out = 'Login was registered'
@@ -58,10 +51,18 @@ document.querySelector('.registr__button').onclick = (event) => {
                 localStorage.setItem(loginValue, JSON.stringify(newUser))
                 out = 'Success'
                 setTimeout(2000)
-                window.location.href = "login.html"
+                window.location.href = "forecast.html"
                 break
             }
         }
     }
     errorOut.textContent = out;
+}
+//Header dropdown events
+
+document.querySelector('.username').onclick = () => {
+    document.querySelector('.dropdown_content').style.display = "flex";
+}
+document.querySelector('.dropdown_content').onmouseleave = () => {
+    document.querySelector('.dropdown_content').style.display = "none";
 }

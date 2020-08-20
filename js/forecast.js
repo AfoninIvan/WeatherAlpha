@@ -24,7 +24,7 @@ document.querySelector('.mobile__burger__container').onclick = () => {
 
 function lastUser() {
     const authElem = document.querySelectorAll('.authorization a')
-    const lastUser = localStorage.key(0);
+    const lastUser = localStorage.key(localStorage.length - 1);
     document.querySelector('.username').textContent = lastUser;
     for (let i = 0; i < authElem.length - 4; i++) {
         authElem[i].style.display = "none";
